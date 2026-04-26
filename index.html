@@ -255,7 +255,7 @@
     /* ─────────────────────────
        SOBRE
     ───────────────────────── */
-    .about { background: var(--cream); }
+    .about { background: #fff; }
 
     .about__inner {
       display: grid;
@@ -302,6 +302,48 @@
     .badge--rose   { background: rgba(156,68,110,.12); color: var(--rose); }
     .badge--sky    { background: rgba(175,204,210,.35); color: #2c6670; }
     .badge--sage   { background: rgba(144,154,118,.2);  color: #4a5236; }
+
+    /* ─────────────────────────
+       PÚBLICO ATENDIDO
+    ───────────────────────── */
+    .audience {
+      background: var(--cream);
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+    }
+
+    .audience__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .audience__header h2 { margin-top: .5rem; }
+    .audience__header h2 em { color: var(--rose); font-style: italic; }
+
+    .audience__visual {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .audience__img {
+      width: 100%;
+      display: block;
+    }
+
+    .audience__labels {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: .75rem;
+      text-align: center;
+    }
+
+    .audience__labels span {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--rose);
+      letter-spacing: .02em;
+    }
 
     /* ─────────────────────────
        ESPAÇO
@@ -464,6 +506,8 @@
       .space__inner,
       .contact__inner { grid-template-columns: 1fr; gap: 2rem; }
 
+      .audience__labels span { font-size: .82rem; }
+
       .nav__links,
       .nav__cta { display: none; }
 
@@ -493,6 +537,7 @@
 
       <ul class="nav__links" id="navLinks">
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#publico">Público</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#espaco">Espaço</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -575,6 +620,25 @@
             <h3>Avaliação e Acompanhamento</h3>
             <p>Avaliação funcional individualizada e plano terapêutico personalizado para atender às necessidades únicas de cada pessoa.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PÚBLICO ATENDIDO ── -->
+  <section class="section audience" id="publico">
+    <div class="container">
+      <div class="audience__header">
+        <span class="hero__eyebrow">Para quem atendo</span>
+        <h2>Integração Sensorial e Saúde Mental<br><em>para todas as fases da vida</em></h2>
+      </div>
+      <div class="audience__visual">
+        <img class="audience__img" src="assets/publico.svg" alt="Atendimento para crianças, adolescentes, adultos e idosos" />
+        <div class="audience__labels">
+          <span>Crianças</span>
+          <span>Adolescentes</span>
+          <span>Adultos</span>
+          <span>Idosos</span>
         </div>
       </div>
     </div>
